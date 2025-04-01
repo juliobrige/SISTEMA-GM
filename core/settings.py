@@ -1,7 +1,5 @@
-
-
 from pathlib import Path
-import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -106,7 +104,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
+import os 
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
@@ -118,3 +116,12 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# mensagem
+from django.contrib.messages import constants
+
+MESSAGE_TAGS = {
+    constants.SUCCESS: 'bg-green-50 text-green-700',
+    constants.ERROR: 'bg-red-50 text-red-700'
+}
