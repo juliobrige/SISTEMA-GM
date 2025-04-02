@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import httpResponse
+from django.http import HttpResponse
 
 def mentorados(request):
-    return HttpResponse('estou no mentorado')
+    if request.method == 'GET':
+        return render (request, 'mentorados.html')
