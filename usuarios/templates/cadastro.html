@@ -12,7 +12,7 @@
           <h2 class="mt-4 text-2xl/9 font-bold tracking-tight text-gray-100">Crie sua conta</h2>
           <p class="mt-2 text-sm/6 text-gray-500">
             Já tem uma conta?
-            <a href="" class="font-semibold text-indigo-300 hover:text-indigo-200">Faça login</a>
+            <a href="{% url 'login'%}" class="font-semibold text-indigo-300 hover:text-indigo-200">Faça login</a>
           </p>
           {% if messages %}
             {% for message in messages %}
@@ -27,11 +27,6 @@
               </div>
             {% endfor %}
          {% endif %}
-
-
-          
-
-
 
         </div>
   
@@ -70,7 +65,7 @@
       </div>
     </div>
     <div class="relative hidden w-0 flex-1 lg:block">
-      <img class="absolute inset-0 size-full object-cover" src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img class="absolute inset-0 size-full object-cover" src="{% static 'tom.png' %}" alt="">
      
     </div>
   </div>
