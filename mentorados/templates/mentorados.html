@@ -66,10 +66,15 @@
                     </div>
                     <div>
                         <label class="block text-sm/6 font-medium text-gray-200">Estágio</label>
+                    
                         <div class="mt-2">
                             <select name="estagio" id="" class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+
+                            {% for estagio in estagios %}
+                            <option class="text-slate-900" value="{{estagio.0}}">{{estagio.1}} </option>
+                            {% endfor %}
          
-                                <option class="text-slate-900" value="">10-1000k</option>
+                                
 
                             </select>
                            
