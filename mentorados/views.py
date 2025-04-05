@@ -20,14 +20,14 @@ def mentorados(request):
         mentorado = Mentorados(
             nome=nome,
             foto=foto,
-            estagio=estagio,
-            navigator_id=navigator,
+            estagios=estagio,
+            navigators_id=navigator,
             user=request.user
         )
 
         mentorado.save()
 
-        messages.add_message(request, constants. SUCCESS, 'Mentorados cadastrado com sucesso.')
+        messages.add_message(request, constants. SUCCESS, 'Mentorado cadastrado com sucesso.')
         return redirect('mentorados')
 
    
