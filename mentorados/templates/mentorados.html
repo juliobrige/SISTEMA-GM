@@ -130,11 +130,11 @@
               </thead>
               <tbody class="divide-y divide-white/5">
                 
-               
+                {% for mentorado in mentorados %}
                   <tr>
                     <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
                       <div class="flex items-center gap-x-4">
-                        <img src="#" alt="" class="size-8 rounded-full bg-gray-800">
+                        <img src="{{mentorado.foto}}" alt="" class="size-8 rounded-full bg-gray-800">
                         <div class="truncate text-sm/6 font-medium text-white">Caio Sampaio</div>
                       </div>
                     </td>
@@ -157,6 +157,7 @@
                         Caio Sampaio
                     </td>
                   </tr>
+                {% endfor %}  
                 
               </tbody>
             </table>

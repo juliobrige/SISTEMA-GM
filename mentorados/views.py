@@ -10,7 +10,9 @@ def mentorados(request):
         return redirect('login')
     if request.method == 'GET':
         navigators = Navigators.objects.filter(user=request.user)
-        return render (request, 'mentorados.html', {'estagios': Mentorados.estagio_choices, 'navigators': navigators})
+        mentorados = Mentorados.objects.filter(user=request.user)
+        return render (request, 'mentorados.html', {'estagios': Mentorados.estagio_choices, 'navigators': navigators
+        , 'mentorados': mentorados})
     elif request.method == 'POST':
         nome = request.POST.get('nome')
         foto = request.FILES.get('foto')
