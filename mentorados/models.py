@@ -29,3 +29,8 @@ class Mentorados(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Disponibildade(models.Model):
+    data_inicial = models.DateTimeField(null=True, blank=True)
+    mentor = models.ForeignKey(User, on_delete=models.CASCADE)
+    agendado = models.BooleanField(default=False) 
